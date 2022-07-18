@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+.container-serch {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+.input-sz{
+    grid-column: 1 / 6;
+}
+.btn-sz{
+    grid-column: 6 / 7;
+}
+
