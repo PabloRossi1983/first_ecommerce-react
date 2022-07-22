@@ -9,7 +9,7 @@ const CartWidget = ()=> {
             <a className="nav-link" href="#">Acceder</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Carrito <i class="fa-solid fa-cart-shopping"></i></a>
+            <a className="nav-link" href="#">Carrito <i className="fa-solid fa-cart-shopping"></i></a>
           </li>
         </ul>
       </div>

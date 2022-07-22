@@ -1,19 +1,40 @@
-import Item from "./Item"
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList"
 import "./Styles/ListItemContainer.css"
+import products from "../utils/products.mock";
+
 
 
 const ListItemContainer = ({greeting}) => {
+
+  const [prodList, setProdList] = useState([]);
+
+  
+
+
+  useEffect(()=>{
+    const getProducts = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 2000);
+    });
+
+    getProducts
+      .then((res)=> setProdList(res))
+      .catch((error)=> alert(`No se ha podido completar la comunicación con el servidor. Error  ${error}`))
+    }, [])
+    
+
+    
+
     return(
       <div className="section">
           <h2 className="title">{greeting}</h2>
-          <Item title="producto 1"  price="500" description="tarrito loco" img={'aceite-bergamota.jpeg'} />
-          <Item title="producto 2"  price="400" description="tarrito grande" img={'aceite-bergamota.jpeg'} />
-          <Item title="producto 3"  price="300" description="tarrito bueno" img={'aceite-bergamota.jpeg'} />
-          <Item title="producto 4"  price="200" description="tarrito lindo" img={'aceite-bergamota.jpeg'} />
-          <Item title="producto 5"  price="200" description="tarrito chico" img={'aceite-bergamota.jpeg'} />
-          <Item title="producto 6"  price="200" description="tarrito feo" img={'aceite-bergamota.jpeg'} />
+          <ItemList dataProd={prodList}/>
       </div>
     )
+    
 }
+
 
 export default ListItemContainer

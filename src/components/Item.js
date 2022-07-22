@@ -1,6 +1,10 @@
+import ItemCount from "./ItemCount"
 import "./Styles/Item.css"
 
-const Item = ({img, title, description, price}) => {
+
+
+const Item = ({data}) => {
+  const {img, title, description, price, stock} = data;
     return(
       <div className="card" >
         <div className="img-cont">
@@ -10,7 +14,7 @@ const Item = ({img, title, description, price}) => {
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{description}</p>
           <p>${price}</p>
-          <a href="#" className="btn btn-outline-primary">Añadir al carrito</a>
+          {<ItemCount price={price} stock={stock}/>}
         </div>
       </div>
     )

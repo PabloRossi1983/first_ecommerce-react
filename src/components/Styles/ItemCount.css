@@ -1,0 +1,17 @@
+.counter{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+} 
+.minus-btn{
+    grid-column: 1/3;
+}
+.plus-btn{
+    grid-column: 7/9;
+}
+.display{
+    grid-column: 3/7;
+}
+
+.sbmt-btn{
+    grid-column: 1/9;
+}
