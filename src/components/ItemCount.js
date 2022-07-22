@@ -19,14 +19,16 @@ const ItemCount = ({price, stock}) => {
   }
   
     return(
-    <div className="counter-cont" role="group" aria-label="Basic example">
+    <div className="general-cont" role="group" aria-label="Basic example">
+      
+      <div className="counter-cont">
+         <button type="button" className="minus-btn min-plusbtn" disabled={counter === 1} onClick={onQuit}>-</button>
+         <p className="display-count">{counter}</p>
+         <button type="button" className="plus-btn min-plusbtn" disabled={counter === stock} onClick={onAdd}>+</button>
+      </div>
 
-      <button type="button" className="btn btn-primary minus-btn" disabled={counter === 1} onClick={onQuit}>-</button>
-      <p className="btn btn-secondary display">{counter}</p>
-      <button type="button" className="btn btn-primary plus-btn" disabled={counter === stock} onClick={onAdd}>+</button>
-
-      <button className="btn btn-outline-primary sbmt-btn">Añadir al carrito<br />Disponibles: {disponibles}</button>
-      <p className="sbmt-btn">Valor total: ${total}</p>
+      <button className="sbmt-btn">Añadir al carrito<br /><small>Disponibles: {disponibles}</small></button>
+      <p className="total-amount">Valor total: ${total}</p>
     </div>
     )  
 }

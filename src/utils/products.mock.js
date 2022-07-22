@@ -35,7 +35,7 @@ const products = [
       id: 5,
       price: 5175,
       title: 'Crema de Enebro',
-      description: 'Crema que te ponés cuando te duele',
+      description: 'Crema para cuando algo duele',
       img: 'products-img/crema-enebro.jpg',
       stock: 6
     },
