@@ -1,26 +1,21 @@
 import { useState } from "react";
 import "./Styles/ItemCount.css";
 
-
 const ItemCount = ({price, stock}) => {
   const [counter, setCounter] = useState(0)
   const [disponibles, setDisponibles] = useState(stock)
   const [total, setTotal] = useState(0)
  
   const onQuit = ()=>{
-      
       setCounter(counter - 1);
       setDisponibles(disponibles + 1);
       setTotal((counter - 1) * price);
   } 
 
   const onAdd = ()=> {
-      
       setCounter(counter + 1);
       setDisponibles(disponibles - 1);
-      setTotal((counter + 1) * price);
-      
-    
+      setTotal((counter + 1) * price); 
   }
   
     return(
@@ -33,8 +28,7 @@ const ItemCount = ({price, stock}) => {
       <button className="btn btn-outline-primary sbmt-btn">Añadir al carrito<br />Disponibles: {disponibles}</button>
       <p className="sbmt-btn">Valor total: ${total}</p>
     </div>
-    )
-    
+    )  
 }
 
 export default ItemCount;
