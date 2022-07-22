@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./Styles/ItemCount.css";
 
 const ItemCount = ({price, stock}) => {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
   const [disponibles, setDisponibles] = useState(stock)
-  const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState(price)
  
   const onQuit = ()=>{
       setCounter(counter - 1);
@@ -19,9 +19,9 @@ const ItemCount = ({price, stock}) => {
   }
   
     return(
-    <div className="btn-group counter" role="group" aria-label="Basic example">
+    <div className="counter-cont" role="group" aria-label="Basic example">
 
-      <button type="button" className="btn btn-primary minus-btn" disabled={counter === 0} onClick={onQuit}>-</button>
+      <button type="button" className="btn btn-primary minus-btn" disabled={counter === 1} onClick={onQuit}>-</button>
       <p className="btn btn-secondary display">{counter}</p>
       <button type="button" className="btn btn-primary plus-btn" disabled={counter === stock} onClick={onAdd}>+</button>
 
