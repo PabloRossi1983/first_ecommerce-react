@@ -54,6 +54,14 @@ const products = [
       description: 'Aceite cuyo uso es una sorpresa',
       img: 'products-img/aceite-bergamota.jpeg',
       stock: 13
+    },
+    { 
+      id: 8,
+      price: 4412,
+      title: 'escencia de moco',
+      description: 'Aceite cuyo uso es una sorpresa',
+      img: 'products-img/aceite-bergamota.jpeg',
+      stock: 13
     }
   ];
 

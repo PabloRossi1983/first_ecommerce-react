@@ -7,7 +7,7 @@
     grid-template-columns: repeat(6, 1fr);
   }
 .input-sz{
-    grid-column: 1 / 6;
+    grid-column: 1 / 7;
     transition: 0.3s;
 
 }

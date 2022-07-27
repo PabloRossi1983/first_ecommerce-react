@@ -1,0 +1,27 @@
+.item-detail-cont{
+    display: flex;
+    flex-direction: row;
+    margin-top: 12rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.item-detail{
+    flex-direction: column;
+}
+
+.with-50-pc{
+    width: 50%;
+}
+
+.item-detail-img{
+    width: 100%;
+}
+
+.text-start{
+    text-align: start;
+}
+
+.item-detail-price{
+    font-size: xx-large;
+}
