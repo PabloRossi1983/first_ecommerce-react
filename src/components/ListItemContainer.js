@@ -3,15 +3,17 @@ import ItemList from "./ItemList"
 import "./Styles/ListItemContainer.css"
 import products from "../utils/products.mock";
 
+
 const ListItemContainer = ({greeting}) => {
 
   const [prodList, setProdList] = useState([]);
+  
 
   useEffect(()=>{
     const getProducts = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(products);
-      }, 2000);
+      }, 5/* 2000 */);
     });
 
     getProducts

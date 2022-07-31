@@ -3,7 +3,7 @@ import Item from "./Item"
 const ItemList = ({dataProd})=> {
   return(    
     <>
-       {dataProd.map( (prod) => <Item key={prod.id} data={prod} />)}
+       {dataProd./* filter((el)=> el.category === 'BIENESTAR-FISICO'). */map( (el) => <Item key={el.id} data={el} />)}
     </>
 )}
 

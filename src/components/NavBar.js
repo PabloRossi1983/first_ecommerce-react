@@ -13,8 +13,11 @@ const NavBar = () => {
             <Logo />
             <Serch />
             <CartWidget />
+          </div>
+          <div className="menu-cont">
+            <Menu />
           </div>      
-          <Menu />
+          
         </header>
     )
 }

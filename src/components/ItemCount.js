@@ -1,21 +1,21 @@
 import { useState } from "react";
 import "./Styles/ItemCount.css";
 
-const ItemCount = ({price, stock}) => {
+const ItemCount = ({priceData, stockData}) => {
   const [counter, setCounter] = useState(1)
-  const [disponibles, setDisponibles] = useState(stock)
-  const [total, setTotal] = useState(price)
+  const [disponibles, setDisponibles] = useState(stockData-1)
+  const [total, setTotal] = useState(priceData)
  
   const onQuit = ()=>{
       setCounter(counter - 1);
       setDisponibles(disponibles + 1);
-      setTotal((counter - 1) * price);
+      setTotal((counter - 1) * priceData);
   } 
 
   const onAdd = ()=> {
       setCounter(counter + 1);
       setDisponibles(disponibles - 1);
-      setTotal((counter + 1) * price); 
+      setTotal((counter + 1) * priceData); 
   }
   
     return(
@@ -24,7 +24,7 @@ const ItemCount = ({price, stock}) => {
       <div className="counter-cont">
          <button type="button" className="minus-btn min-plusbtn" disabled={counter === 1} onClick={onQuit}>-</button>
          <p className="display-count">{counter}</p>
-         <button type="button" className="plus-btn min-plusbtn" disabled={counter === stock} onClick={onAdd}>+</button>
+         <button type="button" className="plus-btn min-plusbtn" disabled={counter === stockData} onClick={onAdd}>+</button>
       </div>
 
       <button className="sbmt-btn">Añadir al carrito<br /><small>Disponibles: {disponibles}</small></button>

@@ -1,7 +1,7 @@
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    font-size: medium;
+    font-weight: 8px;
     color: rgb(93, 93, 93);
     text-decoration: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
@@ -10,15 +10,3 @@
     color: #000000;
     font-weight: bold;
 }
-
-.menu-link-smaller{
-    font-size: smaller;
-}
-
-/* .btn-outline-primary {
-    color: #3909d7;
-    border-color: #3909d7;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-} */
