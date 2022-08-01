@@ -14,6 +14,10 @@
 .menu-link-smaller{
     font-size: smaller;
 }
+.nav-cont *{
+    text-decoration: none;
+    color: rgb(116, 116, 116)
+  }
 
 /* .btn-outline-primary {
     color: #3909d7;
@@ -22,3 +26,4 @@
 *, ::after, ::before {
     box-sizing: border-box;
 } */
+

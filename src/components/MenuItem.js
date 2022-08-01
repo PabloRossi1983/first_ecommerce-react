@@ -1,13 +1,13 @@
 import "./Styles/Menu.css"
 import { Link } from "react-router-dom";
 
-const MenuItem = ({data, cat}) => {
+const MenuItem = ({data}) => {
     
     return(
         <nav className="nav nav-pills nav-fill nav-cont">
-          {/* <Link to={`Categories/AROMATERAPIA`}> */}
+          <Link to={`Category/${data}`}>
             <button className="nav-item nav-link menu-link-smaller">{data}</button>
-          {/* </Link> */}
+          </Link>
         </nav>
     )
 }

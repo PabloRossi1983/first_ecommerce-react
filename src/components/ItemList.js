@@ -1,9 +1,11 @@
 import Item from "./Item"
 
-const ItemList = ({dataProd})=> {
+const ItemList = ({dataProd, cat})=> {
   return(    
     <>
-       {dataProd./* filter((el)=> el.category === 'BIENESTAR-FISICO'). */map( (el) => <Item key={el.id} data={el} />)}
+       {cat !== undefined ? 
+       dataProd.filter((el)=> el.category === cat).map( (el) => <Item key={el.id} data={el} />) :
+       dataProd.map( (el) => <Item key={el.id} data={el} />)}
     </>
 )}
 

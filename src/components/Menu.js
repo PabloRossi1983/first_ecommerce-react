@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react"
-/* import { useParams } from "react-router-dom"; */
 import "./Styles/Menu.css"
 import products from "../utils/products.mock"
 import MenuItem from "./MenuItem"
 
 const Menu = () => {
   const [menuLink, setMenuLink] = useState([]);
-  /* const {categoryId} = useParams();
-  console.log("la categoría: "+categoryId) */
 
   useEffect(()=>{
     const getLink = new Promise((resolve, reject) => {
@@ -21,10 +18,11 @@ const Menu = () => {
   }, [])
   
   const categories = []
+  
      menuLink.map((el)=> !categories.includes(el.category)? categories.push(el.category):false)
     return(
         <>
-          {categories.map((el)=> <MenuItem key={el.id} data={el} />)}  
+          {categories.map((el)=> <MenuItem key={el} data={el}/>)}  
         </>
     )
 }

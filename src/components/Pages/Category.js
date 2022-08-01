@@ -1,5 +1,5 @@
 import ListItemContainer from "../ListItemContainer"
-const Categories = ()=>{
+const Category = ()=>{
     return(
       <div>
         <ListItemContainer greeting="PRODUCTOS BONITOS"/>
@@ -7,4 +7,4 @@ const Categories = ()=>{
     )
 }
 
-export default Categories;
+export default Category;
