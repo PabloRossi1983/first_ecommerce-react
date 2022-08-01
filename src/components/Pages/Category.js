@@ -2,7 +2,7 @@ import ListItemContainer from "../ListItemContainer"
 const Category = ()=>{
     return(
       <div>
-        <ListItemContainer greeting="PRODUCTOS BONITOS"/>
+        <ListItemContainer />
       </div>
     )
 }
