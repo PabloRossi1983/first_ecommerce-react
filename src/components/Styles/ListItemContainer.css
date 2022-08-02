@@ -5,6 +5,7 @@
     margin-top: 12rem;
     margin-left: 15rem;
     margin-right: 15rem;
+    margin-bottom: 5rem;
     
     
 }
@@ -12,5 +13,7 @@
 .title{
     grid-column: 1/4;
     justify-self: start;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 

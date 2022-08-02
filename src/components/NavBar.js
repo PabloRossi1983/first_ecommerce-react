@@ -4,8 +4,6 @@ import CartWidget from "./CartWidget"
 import "./Styles/NavBar.css";
 import Logo from "./Logo";
 
-
-
 const NavBar = () => {
     return(
         <header className="fixed-top shadow">

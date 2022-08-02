@@ -21,7 +21,7 @@ const ListItemContainer = ({greeting}) => {
     getProducts
       .then((res)=> setProdList(res))
       .catch((error)=> alert(`No se ha podido completar la comunicación con el servidor. Error  ${error}`))
-    }, []);
+    }, [categoryId]);
 
     return(
       <div className="section">

@@ -3,16 +3,16 @@ header{
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
   }
 .menu-cont{
   display: flex;
   flex-direction: row;
   padding-left: 20%;
-    padding-right: 20%;
-    background-color: rgb(241, 241, 241);
+  padding-right: 20%;
+  background-color: rgb(241, 241, 241);
 }
 
 .one {

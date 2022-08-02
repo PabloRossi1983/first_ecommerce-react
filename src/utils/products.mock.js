@@ -147,6 +147,7 @@ const products = [
       img: 'products-img/crema-malva.jpg',
       stock: 13
     }
+
   ];
 
   export default products

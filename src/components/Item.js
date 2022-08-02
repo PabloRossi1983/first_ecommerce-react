@@ -8,7 +8,7 @@ const Item = ({data}) => {
       <div className="card" >
         <Link to={`/Item/${id}`}>
           <div className="img-cont ancho-total">
-            <img className="card-img-top" src={`/assets/img/${img}`}  alt="Producto" />
+            <img className="card-img-top" src={`/assets/img/${img}`}  alt={title} />
           </div>
           <div className="card-body ancho-total">
             <h5 className="card-title ancho-total">{title}</h5>
