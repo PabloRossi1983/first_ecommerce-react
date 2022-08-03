@@ -6,19 +6,19 @@ const ItemCount = ({priceData, stockData, setProdAmnt}) => {
   const [disponibles, setDisponibles] = useState(stockData-1)
   const [total, setTotal] = useState(priceData)
  
-  const onQuit = ()=>{
+  const minusBtn = ()=>{
       setCounter(counter - 1);
       setDisponibles(disponibles + 1);
       setTotal((counter - 1) * priceData);
   } 
 
-  const onAdd = ()=> {
+  const plusBtn = ()=> {
       setCounter(counter + 1);
       setDisponibles(disponibles - 1);
       setTotal((counter + 1) * priceData); 
   }
 
-  const addToCart = ()=>{
+  const onAdd = ()=>{
     setProdAmnt(counter);
   }
   
@@ -26,12 +26,12 @@ const ItemCount = ({priceData, stockData, setProdAmnt}) => {
     <div className="general-cont" role="group" aria-label="Basic example">
       
       <div className="counter-cont">
-         <button type="button" className="minus-btn min-plusbtn" disabled={counter === 1} onClick={onQuit}>-</button>
+         <button type="button" className="minus-btn min-plusbtn" disabled={counter === 1} onClick={minusBtn}>-</button>
          <p className="display-count">{counter}</p>
-         <button type="button" className="plus-btn min-plusbtn" disabled={counter === stockData} onClick={onAdd}>+</button>
+         <button type="button" className="plus-btn min-plusbtn" disabled={counter === stockData} onClick={plusBtn}>+</button>
       </div>
 
-      <button className="sbmt-btn" onClick={addToCart}>Añadir al carrito<br /><small>Disponibles: {disponibles}</small></button>
+      <button className="sbmt-btn" onClick={onAdd}>Añadir al carrito<br /><small>Disponibles: {disponibles}</small></button>
       <p className="total-amount">Valor total: ${total}</p>
     </div>
     )  
