@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Styles/ItemCount.css";
 
-const ItemCount = ({priceData, stockData}) => {
+const ItemCount = ({priceData, stockData, setProdAmnt}) => {
   const [counter, setCounter] = useState(1)
   const [disponibles, setDisponibles] = useState(stockData-1)
   const [total, setTotal] = useState(priceData)
@@ -17,6 +17,10 @@ const ItemCount = ({priceData, stockData}) => {
       setDisponibles(disponibles - 1);
       setTotal((counter + 1) * priceData); 
   }
+
+  const addToCart = ()=>{
+    setProdAmnt(counter);
+  }
   
     return(
     <div className="general-cont" role="group" aria-label="Basic example">
@@ -27,7 +31,7 @@ const ItemCount = ({priceData, stockData}) => {
          <button type="button" className="plus-btn min-plusbtn" disabled={counter === stockData} onClick={onAdd}>+</button>
       </div>
 
-      <button className="sbmt-btn">Añadir al carrito<br /><small>Disponibles: {disponibles}</small></button>
+      <button className="sbmt-btn" onClick={addToCart}>Añadir al carrito<br /><small>Disponibles: {disponibles}</small></button>
       <p className="total-amount">Valor total: ${total}</p>
     </div>
     )  

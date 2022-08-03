@@ -1,3 +1,7 @@
+.sbmt-btn *{
+    text-decoration:rgb(80, 80, 216);
+}
+
 .general-cont{
     display: flex;
     flex-direction: column;
@@ -40,6 +44,8 @@
     background-color: white;
     margin-top: 2px;
     transition: 300ms;
+    width: 100%;
+    
 }
 .sbmt-btn:hover{
     color: white;
@@ -52,3 +58,4 @@
 .total-amount{
     grid-column: 1/9;
 }
+
