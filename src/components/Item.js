@@ -13,8 +13,6 @@ const Item = ({data}) => {
           <div className="card-body ancho-total">
             <h5 className="card-title ancho-total">{title}</h5>
             <h6 className="card-text ancho-total">{subtitle}</h6>
-            {/* <p>${price}</p> */}
-            {/* {<ItemCount price={price} stock={stock}/>} */}
           </div>
           </Link>  
       </div>

@@ -7,7 +7,6 @@ import { Link } from "react-router-dom"
 const ItemDetail = ({data})=>{
  const {price, title, subtitle, description, img, stock, id} = data;
  const [prodAmnt, setProdAmnt] = useState(0);
- console.log(prodAmnt)
     return(
       <div className="item-detail-cont">
         <div className="with-50-pc">
