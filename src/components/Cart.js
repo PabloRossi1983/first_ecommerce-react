@@ -1,6 +1,7 @@
 import "./Styles/Cart.css"
 import CartItem from "./CartItem"
 import ItemDetailContainer from "./ItemDetailContainer"
+import { Link } from "react-router-dom"
 
 const Cart = ()=>{
     return(
@@ -17,7 +18,9 @@ const Cart = ()=>{
                     
                   </div>
                   <div className="modal-footer">
+                    <Link to="/">
                     <button type="button" className="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                    </Link>
                     <button type="button" className="btn btn-primary">FINALIZAR COMPRA</button>
                   </div>
                 </div>

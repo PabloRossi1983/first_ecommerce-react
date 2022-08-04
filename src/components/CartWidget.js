@@ -1,5 +1,5 @@
 import './Styles/CartWidget.css'
-
+import { Link } from 'react-router-dom';
 
 const CartWidget = ()=> {
     return(
@@ -9,7 +9,7 @@ const CartWidget = ()=> {
             <a className="cart-nav-link" href="#">Acceder</a>
           </li>
           <li className="cart-nav-item">
-            <a className="nav-link" href="#">Carrito <i className="fa-solid fa-cart-shopping"></i></a>
+            <Link to="/Cart" className="nav-link" >Carrito <i className="fa-solid fa-cart-shopping"></i></Link>
           </li>
         </ul>
       </div>
