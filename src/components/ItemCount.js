@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Styles/ItemCount.css";
+import { CartContext } from "../Context/CartContext";
 
-const ItemCount = ({priceData, stockData, setProdAmnt}) => {
+const ItemCount = ({priceData, stockData, setProdAmnt, data}) => {
   const [counter, setCounter] = useState(1)
   const [disponibles, setDisponibles] = useState(stockData-1)
   const [total, setTotal] = useState(priceData)
+  const {addToCart} = useContext(CartContext)
+  
  
   const minusBtn = ()=>{
       setCounter(counter - 1);
@@ -20,8 +23,10 @@ const ItemCount = ({priceData, stockData, setProdAmnt}) => {
 
   const onAdd = ()=>{
     setProdAmnt(counter);
+    addToCart({...data, amount: counter})
+    
   }
-  
+
     return(
     <div className="general-cont" role="group" aria-label="Basic example">
       

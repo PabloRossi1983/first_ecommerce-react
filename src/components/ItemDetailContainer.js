@@ -12,25 +12,19 @@ const ItemDetailContainer = ()=>{
   useEffect(()=>{ 
     const getDetail = new Promise((resolve, reject) => {
       setTimeout(()=>{
-        resolve(products, 2000)
-      })  
+        resolve(products.filter((el)=> el.id == id))}, 5)  
     });
     
   getDetail
-    .then((res)=>filterId(res))
+    .then((res)=> setProdDetail(res))
     .catch((err)=> alert(`No se pudo recuperar el detalle del producto. Error ${err}`))
   
     
-  }, []);
-  
-  const filterId = ()=>{
-    products.map((el)=> el.id == id? setProdDetail(el): false)
-  }
+  }, [id]);
 
-  
     return(
         <div>
-          <ItemDetail key={prodDetail.id} data={prodDetail}/>
+          {prodDetail.map((el)=> <ItemDetail key={el.id} data={el}/>)}
         </div>
     )
 }

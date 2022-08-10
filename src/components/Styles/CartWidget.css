@@ -1,12 +1,11 @@
-.cart-nav-link {
-    display: block;
-    padding: 0.5rem 1rem;
-    font-size: medium;
-    color: rgb(93, 93, 93);
-    text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-}    
-.cart-container{
-    text-decoration: none;
-    color:black;
+.cart-cont-position{
+    position: fixed;
+    z-index: 999;
+    top: 0%; 
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.485);
+}
+.hide{
+    display: none;
 }

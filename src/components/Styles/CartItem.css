@@ -1,6 +1,7 @@
 .cart-item-cont{
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
 }
 
 .cart-img{
@@ -9,9 +10,22 @@
 }
 
 .cart-prod-info{
-    grid-column: 3/7;
+    grid-column: 3/9;
+}
+.prod-amount{
+    grid-column: 9/10;
+}
+.prod-price{
+    grid-column: 10/12;
 }
 
-.cart-prod-price{
-    grid-column: 7/9;
+.clear-btn{
+    grid-column: 12/13;
+    width: 36px;
+    height: 36px;
+    left: 689px;
+    top: 429px;
+    
+    background: #d91e1e;
+    border-radius: 5px;
 }

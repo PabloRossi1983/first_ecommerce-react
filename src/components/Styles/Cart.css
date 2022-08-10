@@ -1,11 +1,4 @@
-.cart-cont-position{
-    position: fixed;
-    z-index: 999;
-    top: 0%; 
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.485);
-}
-.hide{
-    display: none;
+.checkout-page{
+    margin-top: 200px;
+    font-size: larger;
 }

@@ -14,7 +14,7 @@ const Item = ({data}) => {
             <h5 className="card-title ancho-total">{title}</h5>
             <h6 className="card-text ancho-total">{subtitle}</h6>
           </div>
-          </Link>  
+        </Link>  
       </div>
     )
 }
