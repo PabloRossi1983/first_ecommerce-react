@@ -3,14 +3,13 @@ import "./Styles/ItemDetail.css";
 import { useState } from "react";
 import { Link } from "react-router-dom"
 
-
 const ItemDetail = ({data})=>{
- const {price, title, subtitle, description, img, stock, id} = data;
- const [prodAmnt, setProdAmnt] = useState(0);
+  const {price, title, subtitle, description, img, stock, id} = data;
+  const [prodAmnt, setProdAmnt] = useState(0);
     return(
       <div className="item-detail-cont">
         <div className="with-50-pc">
-          <img src={`/assets/img/${img}`} className="item-detail-img" />
+          <img src={`/assets/img/${img}`} className="item-detail-img" alt={title}/>
         </div>
         <div className="item-detail with-50-pc">
             <h3 className="text-start">{title}</h3>
@@ -21,7 +20,10 @@ const ItemDetail = ({data})=>{
               {
               prodAmnt < 1 ?
                        <ItemCount key={id} priceData={price} stockData={stock} setProdAmnt={setProdAmnt} data={data}/>:
-                       <button className="sbmt-btn"><Link to="/cart">Finalizar compra</Link></button>
+                       <div>
+                         <button className="sbmt-btn"><Link to="/">Seguir comprando</Link></button>
+                         <button className="sbmt-btn"><Link to="/cart">Finalizar compra</Link></button>
+                       </div>  
               } 
             </div>
         </div>
