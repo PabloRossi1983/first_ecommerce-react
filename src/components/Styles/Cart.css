@@ -1,4 +1,92 @@
-.checkout-page{
+*{
+    margin: 0;
+    padding: 0;
+}
+.cont-princ{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    color: rgb(116, 116, 116);
+}
+
+.checkout-cont{
     margin-top: 200px;
     font-size: larger;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    align-self: center;
+}
+.prod-det-cont{
+    grid-column: 1/9;
+    margin: 2rem    
+}
+.th-cont{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0.5rem;
+    justify-items: start;
+}
+
+.producto-th{
+    grid-column: 1/8;
+}
+.precio-th{
+    grid-column: 8/10;
+    justify-self: center;
+}
+.cantidad-th{
+    grid-column: 10/12;
+}
+
+.subtotal-th{
+    grid-column: 12/13;
+}
+
+
+.final-cont{
+    grid-column: 10/14; 
+    margin: 2rem;
+}
+.table-padding{
+    display: block;
+}
+.total-tr{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px rgb(200, 200, 200);
+}
+.title-tr{
+    display: flex;
+    justify-content: start;
+    
+}
+
+.underline-1rem{
+    margin-bottom: 1rem;
+    border-bottom: solid 1px rgb(200, 200, 200);
+}
+
+.underline-2rem{
+    margin-bottom: 1rem;
+    border-bottom: solid 2px rgb(200, 200, 200);
+}
+
+.empty-column{
+    display: flex;
+}
+
+.line-div{
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-line{
+    border-right: solid 1px rgb(200, 200, 200);
+}
+
+.small-title{
+    font-size: smaller;
 }

@@ -9,7 +9,7 @@ const CartWidget = ({hideCart})=>{
   const {cartProducts, clearCart, totalAmount} = useContext(CartContext);
 
     return(
-        <div className="cart-cont-position">
+        <div className="cart-cont-position cont-princ">
             <div id="exampleModal" tabIndex="+1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
               <div className="modal-dialog" role="document">
                 <div className="modal-content">
@@ -19,7 +19,18 @@ const CartWidget = ({hideCart})=>{
                   <div className="modal-body">
                     {totalAmount < 1 ?
                      <p>EL CARRITO ESTÁ VACÍO</p>:
-                      cartProducts.map(el=> <CartWidgetItem key={el.id} dataProd={el}/>)}
+                     <div className="prod-det-cont">
+                     <tbody className="table-padding">
+                       <tr className="th-cont underline-2rem">
+                         <th className="producto-th">PRODUCTO</th>
+                         <th className="precio-th small-title">PRECIO</th>
+                         <th className="cantidad-th small-title">CANTIDAD</th>
+                         <th className="subtotal-th small-title">SUBTOTAL</th>
+                       </tr>
+                     </tbody>
+                       {cartProducts.map(el=> <CartWidgetItem key={el.id} dataProd={el}/>)}
+                     <button className="sbmt-btn" onClick={()=>hideCart(false)}><Link to="/">Seguir comprando</Link></button>  
+                   </div>}
                   </div>
                   {totalAmount < 1?
                   <div className="modal-footer">

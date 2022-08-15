@@ -39,6 +39,10 @@ const CartProvider = ({children}) => {
         return array
     }
   
+/* console.log("productos: ",cartProducts)
+console.log("amount: ",totalAmount)
+console.log("price: ",totalPrice) */
+
     const data = {
         cartProducts,
         totalAmount,

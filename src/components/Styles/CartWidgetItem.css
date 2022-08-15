@@ -4,25 +4,25 @@
     align-items: center;
 }
 
-.cart-img{
-    grid-column: 2/4;
+.cart-widget-img{
+    grid-column: 2/3;
     width: 100px;
 }
 
-.cart-prod-info{
-    grid-column: 4/9;
+.cart-widget-prod-info{
+    grid-column: 4/7;
 }
 
-.prod-sub-price{
+.prod-widget-sub-price{
+    grid-column: 7/9;
+    justify-self: end;
+}
+.prod-widget-amount{
     grid-column: 9/10;
     justify-self: end;
 }
-.prod-amount{
-    grid-column: 10/11;
-    justify-self: end;
-}
-.prod-price{
-    grid-column: 11/13;
+.prod-widget-price{
+    grid-column: 10/13;
     justify-self: end;
 }
 
