@@ -1,8 +1,8 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
-}
-.cont-princ{
+} */
+.cart-cont-princ{
     display: flex;
     justify-content: center;
     font-size: small;

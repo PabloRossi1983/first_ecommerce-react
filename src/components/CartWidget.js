@@ -20,14 +20,14 @@ const CartWidget = ({hideCart})=>{
                     {totalAmount < 1 ?
                      <p>EL CARRITO ESTÁ VACÍO</p>:
                      <div className="prod-det-cont">
-                     <tbody className="table-padding">
-                       <tr className="th-cont underline-2rem">
-                         <th className="producto-th">PRODUCTO</th>
-                         <th className="precio-th small-title">PRECIO</th>
-                         <th className="cantidad-th small-title">CANTIDAD</th>
-                         <th className="subtotal-th small-title">SUBTOTAL</th>
-                       </tr>
-                     </tbody>
+                     <div className="table-padding">
+                       <div className="th-cont underline-2rem">
+                         <h6 className="producto-th">PRODUCTO</h6>
+                         <h6 className="precio-th small-title">PRECIO</h6>
+                         <h6 className="cantidad-th small-title">CANTIDAD</h6>
+                         <h6 className="subtotal-th small-title">SUBTOTAL</h6>
+                       </div>
+                     </div>
                        {cartProducts.map(el=> <CartWidgetItem key={el.id} dataProd={el}/>)}
                      <button className="sbmt-btn" onClick={()=>hideCart(false)}><Link to="/">Seguir comprando</Link></button>  
                    </div>}

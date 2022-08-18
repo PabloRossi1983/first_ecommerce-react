@@ -10,7 +10,7 @@ const CartWidgetItem = ({dataProd})=> {
   
     return(
         <div className="cart-item-cont underline-1rem">
-          <button className="clear-btn" onClick={()=>clearItem(id, amount, price)} ><i class="fa-regular fa-trash-can"></i></button>
+          <button className="clear-btn" onClick={()=>clearItem(id, amount, price)} ><i className="fa-regular fa-trash-can"></i></button>
           <div className="cart-widget-img"> 
             <img className="card-img-top"  src={`/assets/img/${img}`} alt={title}/>
           </div> 

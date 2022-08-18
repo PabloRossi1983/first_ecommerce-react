@@ -3,7 +3,6 @@ const products = [
       id: 1,
       price: 4400,
       category: 'AROMATERAPIA',
-      categoryID: 1,
       title: 'Aceite de Lavanda',
       subtitle: 'PONER SUBTITULO',
       description: 'Aceite que hace cosas lindas',

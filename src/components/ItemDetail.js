@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom"
 
 const ItemDetail = ({data})=>{
-  const {price, title, subtitle, description, img, stock, id} = data;
+  const {price, title, subtitle, description, img, id} = data;
   const [prodAmnt, setProdAmnt] = useState(0);
     return(
       <div className="item-detail-cont">
@@ -19,7 +19,7 @@ const ItemDetail = ({data})=>{
             <div className="with-50-pc">
               {
               prodAmnt < 1 ?
-                       <ItemCount key={id} priceData={price} stockData={stock} setProdAmnt={setProdAmnt} data={data}/>:
+                       <ItemCount key={id} setProdAmnt={setProdAmnt} data={data}/>:
                        <div>
                          <button className="sbmt-btn"><Link to="/">Seguir comprando</Link></button>
                          <button className="sbmt-btn"><Link to="/cart">Finalizar compra</Link></button>

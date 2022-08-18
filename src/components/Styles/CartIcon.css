@@ -6,12 +6,17 @@
     text-decoration: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }    
-.cart-container{
+.cart-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color:black;
 }
 
 .quant-icon{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }

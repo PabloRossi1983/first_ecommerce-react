@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const Item = ({data}) => {
-  const {img, title,subtitle, description, price, stock, id} = data;
+  const {img, title, subtitle, id} = data;
     return(
       <div className="card" >
         <Link to={`/Item/${id}`}>

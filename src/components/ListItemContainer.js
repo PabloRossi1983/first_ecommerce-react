@@ -1,28 +1,38 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList"
 import "./Styles/ListItemContainer.css"
-import products from "../utils/products.mock";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import db from "../utils/firebaseConfig";
+import { CartContext } from "../Context/CartContext";
 
 
 const ListItemContainer = ({greeting}) => {
 
   const [prodList, setProdList] = useState([]);
   const {categoryId} = useParams();
+  const {getMenuCAt} = useContext(CartContext)
   const title = ()=> categoryId !== undefined ? categoryId : greeting;
 
-  useEffect(()=>{
-    const getProducts = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(categoryId !== undefined ? 
-                products.filter((el) => el.category === categoryId): 
-                products);
-      }, 5);
-    });
+const getProducts = async ()=> {
+  const productCollection = categoryId !== undefined ? 
+                            query(collection(db, 'products'), where("category", "==", categoryId)):
+                            collection(db, 'products');
+  const productSnapShot = await getDocs(productCollection)
+  const productList = productSnapShot.docs.map((doc)=> {
+    let product = doc.data()
+    product.id = doc.id
+    return product
+  })
+  return productList
+}
+ 
+                
 
-    getProducts
+  useEffect(()=>{
+    getProducts()
       .then((res)=> setProdList(res))
-      .catch((error)=> alert(`No se ha podido completar la comunicación con el servidor. Error  ${error}`))
+      .catch((error)=> alert(`No se ha podido completar la comunicación con el servidor. Error  ${error}`)) 
     }, [categoryId]);
     
     return(

@@ -9,17 +9,17 @@ const Cart = ()=>{
   const {cartProducts, totalAmount, totalPrice} = useContext(CartContext);
     
     return(
-      <div className="cont-princ">
-        <div className="checkout-cont checkout-page"> 
+      <div className="cart-cont-princ">
+        <div className="checkout-cont"> 
           <div className="prod-det-cont">
-            <tbody className="table-padding">
-              <tr className="th-cont underline-2rem">
-                <th className="producto-th">PRODUCTO</th>
-                <th className="precio-th small-title">PRECIO</th>
-                <th className="cantidad-th small-title">CANTIDAD</th>
-                <th className="subtotal-th small-title">SUBTOTAL</th>
-              </tr>
-            </tbody>
+            <div className="table-padding">
+              <div className="th-cont underline-2rem">
+                <h6 className="producto-th">PRODUCTO</h6>
+                <h6 className="precio-th small-title">PRECIO</h6>
+                <h6 className="cantidad-th small-title">CANTIDAD</h6>
+                <h6 className="subtotal-th small-title">SUBTOTAL</h6>
+              </div>
+            </div>
               {cartProducts.map(el=> <CartItem key={el.id} dataProd={el}/>)}
             <button className="sbmt-btn"><Link to="/">Seguir comprando</Link></button>  
           </div> 
@@ -28,19 +28,19 @@ const Cart = ()=>{
              <div className="line-div"></div>
           </div>
           <div className="final-cont">
-            <tbody className="table-padding"> 
-              <tr className="title-tr underline-2rem">
-                <th>TOTAL DEL CARRITO</th>
-              </tr> 
-              <tr className="total-tr underline-1rem">
-                <th className="total-th">CANTIDAD PRODUCTOS:</th>
-                <td className="total-td">{totalAmount}</td>
-              </tr>  
-              <tr className="total-tr underline-1rem">
-                <th className="total-th">TOTAL:</th>
-                <td className="total-td">$ {totalPrice}</td>
-              </tr> 
-            </tbody>
+            <div className="table-padding"> 
+              <div className="title-tr underline-2rem">
+                <h6>TOTAL DEL CARRITO</h6>
+              </div> 
+              <div className="total-tr underline-1rem">
+                <h6 className="total-th">CANTIDAD PRODUCTOS:</h6>
+                <h6 className="total-td">{totalAmount}</h6>
+              </div>  
+              <div className="total-tr underline-1rem">
+                <h6 className="total-th">TOTAL:</h6>
+                <h6 className="total-td">$ {totalPrice}</h6>
+              </div> 
+            </div>
             <button className="sbmt-btn"><Link to="/cart">Finalizar compra</Link></button>
           </div>  
         </div> 
