@@ -1,0 +1,9 @@
+.purchase-detail-item-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.underline-1rem{
+    margin-bottom: 1rem;
+    border-bottom: solid 1px rgb(200, 200, 200);
+}

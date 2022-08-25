@@ -7,7 +7,9 @@ import CartWidget from  "./CartWidget"
 import { useState } from "react";
 
 const NavBar = () => {
+  
   const[showCart, setShowCart] = useState(false)
+
     return(
         <header className="fixed-top shadow">
           <div  className="container">

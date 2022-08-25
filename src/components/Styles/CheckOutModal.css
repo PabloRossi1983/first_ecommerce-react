@@ -1,0 +1,135 @@
+.checkout-modal-cont{
+    position: fixed;
+    z-index: 999;
+    top: 0%; 
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.485);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-cont{
+    background-color: white;
+    position: fixed; 
+    width: 80%;
+    min-height: 90vh;
+    border-radius: 5px;
+}
+
+.form{
+    display: flex;
+    padding: 1rem;
+    
+}
+
+.checkout-detail-cont{
+    width: 50%;
+    border: solid 2px rgba(80, 80, 216, 0.77);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.inputs-cont{
+    width: 50%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-title{
+    grid-column: 1/3;
+    margin:1rem;
+    justify-self: start;
+}
+
+.input1{
+   grid-column: 1/2;
+   margin:1rem 
+}
+
+.input2{
+    grid-column: 2/3;
+    margin:1rem 
+ }
+
+ .input3{
+    grid-column: 1/3 ;
+    margin:1rem 
+ }
+
+ .input4{
+    grid-column: 1/3 ;
+    margin:1rem 
+ }
+
+ .input5{
+    grid-column: 1/3 ;
+    margin:1rem 
+ }
+
+ .input6{
+    grid-column: 1/3 ;
+    margin:1rem 
+ }
+
+ .input7{
+    grid-column: 1/3 ;
+    margin:1rem 
+ }
+
+ .purchase-detail-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.purchase-detail-item-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+ .underline-2rem{
+    margin-bottom: 1rem;
+    border-bottom: solid 2px rgb(200, 200, 200);
+}
+
+.x-close-cont{
+    display: flex;
+    justify-content: end;
+}
+
+.x-close{
+    font-size: larger;
+    border: solid 2px;
+    border-radius: 20%;
+}
+
+.x-close :hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+
+
+/* //Chrome: */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+/* //Firefox: */
+input[type="number"] {
+-moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+-moz-appearance: number-input;
+}
+/* //Other */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}

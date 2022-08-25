@@ -1,12 +1,15 @@
 import "./Styles/Cart.css";
 import CartItem from "./CartItem"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../Context/CartContext";
 import { Link } from "react-router-dom";
+import CheckOutModal from "./CheckOutModal"
 
 const Cart = ()=>{
   
+  const [showModal, setShowModal] = useState(false)
   const {cartProducts, totalAmount, totalPrice} = useContext(CartContext);
+
     
     return(
       <div className="cart-cont-princ">
@@ -41,9 +44,10 @@ const Cart = ()=>{
                 <h6 className="total-td">$ {totalPrice}</h6>
               </div> 
             </div>
-            <button className="sbmt-btn"><Link to="/cart">Finalizar compra</Link></button>
+            <button onClick={()=>setShowModal(true)} className="sbmt-btn">Finalizar compra</button>
           </div>  
         </div> 
+        {showModal && <CheckOutModal total={totalPrice} items={cartProducts} setShowModal={setShowModal}/>}
       </div>  
     )
 }

@@ -7,7 +7,8 @@ const CartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState([]);
     const [totalAmount, setTotalAmount] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
-    const [menuCat, setMenuCat] = useState([])
+    const [confirmation, setConfirmation] = useState({})
+    //const [menuCat, setMenuCat] = useState([])
   
     const addToCart = (product)=>{ 
         setCartProducts(cartProducts.findIndex(el => product.id === el.id) === -1 ?
@@ -53,7 +54,7 @@ const CartProvider = ({children}) => {
         };
       }
       return array
-  }
+    }
   
 /* console.log("productos: ",cartProducts)
 console.log("amount: ",totalAmount)
@@ -63,11 +64,13 @@ console.log("price: ",totalPrice) */
         cartProducts,
         totalAmount,
         totalPrice,
+        confirmation,
         setCartProducts,
         addToCart,
         clearCart,
         clearItem,
-        renewAmount
+        renewAmount,
+        setConfirmation
     }
     
     return(
