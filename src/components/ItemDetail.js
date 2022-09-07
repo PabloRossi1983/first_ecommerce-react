@@ -29,8 +29,8 @@ const ItemDetail = ({data})=>{
                 prodAmnt < 1 ?
                          <ItemCount key={id} setProdAmnt={setProdAmnt} data={data}/>:
                          <div>
-                           <button className="sbmt-btn"><Link to="/">Seguir comprando</Link></button>
-                           <button className="sbmt-btn"><Link to="/cart">Finalizar compra</Link></button>
+                           <Link to="/"><button className="sbmt-btn">Seguir comprando</button></Link>
+                           <Link to="/cart"><button className="sbmt-btn">Finalizar compra</button></Link>
                          </div>  
                 } 
               </div>

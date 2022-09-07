@@ -29,7 +29,7 @@ const CartWidget = ({hideCart})=>{
                        </div>
                      </div>
                        {cartProducts.map(el=> <CartWidgetItem key={el.id} dataProd={el}/>)}
-                     <button className="sbmt-btn" onClick={()=>hideCart(false)}><Link to="/">Seguir comprando</Link></button>  
+                     <Link to="/"><button className="sbmt-btn" onClick={()=>hideCart(false)}>Seguir comprando</button></Link>  
                    </div>}
                   </div>
                   {totalAmount < 1?

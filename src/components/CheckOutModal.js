@@ -81,7 +81,7 @@ const CheckOutModal = ({total, items, setShowModal})=> {
                 <input className="input5" type="text" name="cp" placeholder="Código postal" value={formData.cp} onChange={handleChange} required/>
                 <input className="input6" type="text" name="phone" pattern="[0-9]{7,10}" title="Debe ingresar entre 7 y 10 dígitos" placeholder="Teléfono" value={formData.phone} onChange={handleChange} required/>
                 <input id="email1" className="input7" type="email" name="email" placeholder="e-mail" value={formData.email} onChange={handleChange} required/>
-                <input id="email2" className="input8" type="email" name="email2" placeholder="repite e-mail" value={formData.email2} onChange={handleChange} required/>
+                <input id="email2" className="input8" type="email" name="email2" placeholder="repite el e-mail" value={formData.email2} onChange={handleChange} autocomplete="************" required/>
                 <p id="match-error" className="email-match-error hide-match-error">Los correos no coinciden! Vuelve a intentarlo.</p>
               </div> 
               <div className="checkout-detail-cont">

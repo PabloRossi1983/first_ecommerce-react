@@ -25,7 +25,7 @@ const Cart = ()=>{
               </div>
             </div>
               {cartProducts.map(el=> <CartItem key={el.id} dataProd={el}/>)}
-            <button className="sbmt-btn"><Link to="/">Seguir comprando</Link></button>  
+            <Link to="/"><button className="sbmt-btn">Seguir comprando</button></Link> 
           </div> 
           <div className="empty-column ">
              <div className="line-div vertical-line"></div>
