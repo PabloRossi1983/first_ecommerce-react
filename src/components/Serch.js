@@ -5,7 +5,7 @@ import db from "../utils/firebaseConfig";
 import { collection, getDocs} from "firebase/firestore";
 
 
-const Serch = ()=> {
+const Serch = ({setShowBurguer})=> {
   const [products, setProducts] = useState([]);
   const [foundProducts, setFoundProducts] = useState([]); 
   const [showSerch, setShowSerch] = useState(false);
@@ -43,8 +43,14 @@ const Serch = ()=> {
   }
 
   const clearSerch = (e)=> {
-    setShowSerch(false)
-    e.target.value = ""
+    setTimeout(() => {
+      e.target.value = "";
+      handleChange(e)
+    }, 500);
+  }
+
+  const clearBurguerMenu = ()=>{
+    setShowBurguer(false)
   }
   
   return(
@@ -53,8 +59,9 @@ const Serch = ()=> {
                type="search" 
                placeholder="Buscar producto" 
                aria-label="Search"
-               onChange={handleChange} />
-        {showSerch && <SerchModal data={foundProducts} clearModal={clearSerch}/>}
+               onChange={handleChange}
+               onBlur={clearSerch}/>
+        {showSerch && <SerchModal data={foundProducts} clearModal={clearSerch} clearBurguerMenu={clearBurguerMenu}/>}
       </div>
    
   )

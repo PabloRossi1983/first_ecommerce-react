@@ -8,7 +8,7 @@ const CartProvider = ({children}) => {
     const [totalAmount, setTotalAmount] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
     const [confirmation, setConfirmation] = useState({})
-    //const [menuCat, setMenuCat] = useState([])
+    
   
     const addToCart = (product)=>{ 
         setCartProducts(cartProducts.findIndex(el => product.id === el.id) === -1 ?

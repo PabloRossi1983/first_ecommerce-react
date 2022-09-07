@@ -6,6 +6,7 @@ import Detail from './components/Pages/Detail';
 import Category from './components/Pages/Category';
 import CheckOut from './components/Pages/CheckOut';
 import CartProvider from './Context/CartContext';
+import Footer from './components/Footer';
 
 
 
@@ -22,8 +23,10 @@ function App() {
             <Route path='Category/:categoryId' element={<Category />}/>
             <Route path="/cart" element={<CheckOut />}/>
           </Routes>
+          <Footer />
         </BrowserRouter >
       </CartProvider>
+      
     </div>
   );
 }

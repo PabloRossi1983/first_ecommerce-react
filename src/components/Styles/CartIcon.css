@@ -14,9 +14,30 @@
     color:black;
 }
 
-.quant-icon{
+.cart-icon{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    color:rgb(93, 93, 93)
 }
+
+.cart-icon:hover{
+    cursor: pointer;
+}
+
+.cart-icon-quant{
+    margin-bottom: 0%;
+    justify-self: center;
+}
+
+.carrito-text{
+    display: inherit;
+    margin: 0%;
+}
+
+@media (max-width: 576px) {
+    .cart-icon-container{
+      display: none;
+    }
+  }

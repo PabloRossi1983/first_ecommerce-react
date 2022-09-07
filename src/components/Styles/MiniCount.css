@@ -1,3 +1,13 @@
 .mini-count-cont{
-    display: block;
+    display: block
+}
+
+.mini-button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgb(226, 22, 22);
+}
+
+.display-mini-count{
+    margin-bottom: 17%;
 }

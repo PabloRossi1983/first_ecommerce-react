@@ -1,0 +1,40 @@
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.vertical-menu-main-cont{
+    position: fixed;
+    float: right;
+    width: 280px;
+    height: 90vh;
+    margin: 0vh;
+    padding: 0.5rem;
+    background-color: rgb(241, 241, 241);
+}
+
+.x-close-cont{
+    height: 20px;
+    width: 20px;
+    margin-inline-start: auto;
+    padding: 0%;
+}
+
+.x-close{
+    font-size: larger;
+    border: none;
+    border-radius: 20%;
+    background-color: rgba(146, 152, 157, 0.386);
+    transition: 0.3s ease-in-out;
+}
+
+.vertical-serch-cont{
+    margin: 1rem 0.8rem 1.4rem 0.8rem;
+    padding: 0;
+}
+
+.vertical-menu-cont{
+    padding: 0;
+    margin: 0;
+}

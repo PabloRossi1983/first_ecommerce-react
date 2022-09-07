@@ -22,3 +22,19 @@
     margin-bottom: 1rem;
     border-bottom: solid 2px rgb(200, 200, 200);
 }
+
+@media (max-width: 768px){
+    .confirmation-cont{
+        width: 60%;
+    }
+}
+
+@media (max-width: 576px){
+    .confirmation-cont{
+        width: 75%;
+        height: 50vh;
+        max-height: calc(80vh);
+        overflow-y: auto;
+        align-items: flex-start;
+    }
+}

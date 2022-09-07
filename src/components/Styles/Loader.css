@@ -1,0 +1,17 @@
+.loader-main-cont{
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.gif-cont{
+    width: 10vh;
+}
+
+.gif-loader{
+    width: 100%;
+
+
+}

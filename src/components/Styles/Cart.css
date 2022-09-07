@@ -90,3 +90,40 @@
 .small-title{
     font-size: smaller;
 }
+
+@media (max-width: 1200px) {
+  .checkout-cont{
+      margin-top: 200px;
+      font-size: larger;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-cont{
+      width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout-cont{
+      width: 90%;
+      display: block;
+        
+  }
+  .cart-cont-princ{
+    display: block;
+    width: auto;
+  }
+  .prod-det-cont{
+    width: 100%;
+    margin: 2%
+  }
+  .final-cont{
+    width: 100%;
+    margin: 2%;
+  }
+}

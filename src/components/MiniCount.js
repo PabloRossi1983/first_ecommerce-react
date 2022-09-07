@@ -21,9 +21,9 @@ const MiniCount = ({data, setMiniCountAmount}) => {
 
     return(
     <div className="mini-count-cont">
-        <button type="button" disabled={counter === stock} onClick={plusBtn}><i className="fa-solid fa-caret-up"></i></button>
-        <p className="display-count">{counter}</p>
-        <button type="button" disabled={counter === 1} onClick={minusBtn}><i className="fa-solid fa-caret-down"></i></button>
+        <button className="mini-button" type="button" disabled={counter === stock} onClick={plusBtn}><i className="fa-solid fa-caret-up"></i></button>
+        <p className="display-mini-count">{counter}</p>
+        <button className="mini-button" type="button" disabled={counter === 1} onClick={minusBtn}><i className="fa-solid fa-caret-down"></i></button>
     </div>
     )  
 }

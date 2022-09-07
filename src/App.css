@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 link *{
@@ -40,3 +45,6 @@ link *{
     transform: rotate(360deg);
   }
 }
+
+
+

@@ -1,6 +1,7 @@
 import "./Styles/Cart.css";
 import CartItem from "./CartItem"
 import { useContext, useState } from "react";
+import useNumberFormat from "./Hooks/useFormatNumber";
 import { CartContext } from "../Context/CartContext";
 import { Link } from "react-router-dom";
 import CheckOutModal from "./CheckOutModal"
@@ -41,7 +42,7 @@ const Cart = ()=>{
               </div>  
               <div className="total-tr underline-1rem">
                 <h6 className="total-th">TOTAL:</h6>
-                <h6 className="total-td">$ {totalPrice}</h6>
+                <h6 className="total-td">$ {useNumberFormat(totalPrice)}</h6>
               </div> 
             </div>
             <button onClick={()=>setShowModal(true)} className="sbmt-btn">Finalizar compra</button>

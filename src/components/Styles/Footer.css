@@ -1,0 +1,125 @@
+.footer-main-cont{
+    color: rgb(93, 93, 93);
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.footer-top-cont{
+    height: auto;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+.footer-contact-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer-contact{
+    padding-left: 5rem;
+}
+
+.footer-list-cont{
+    width: 80vh;
+    display: flex
+}
+
+.item1{grid-area: item1;}
+.item2{grid-area: item2;}
+.item3{grid-area: item3;}
+.item4{grid-area: item4;}
+.item5{grid-area: item5;}
+.item6{grid-area: item6;}
+
+.footer-list-grid{
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr); */
+    grid-template-areas: 
+    'item1 item2'
+    'item3 item5'
+    'item4 item6';
+}
+
+
+.footer-list-item{
+    justify-self: start;
+}
+
+.footer-bottom-cont{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(94, 94, 94);
+    color:rgb(241, 241, 241);
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    display: flex;
+    font-size:smaller;
+}
+
+.underline-2rem{
+    margin-bottom: 1rem;
+    border-bottom: solid 2px rgb(200, 200, 200);
+}
+
+.footer-link:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .footer-main-cont{
+        height: 60vh;
+    }
+    .footer-top-cont{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .footer-list-cont{
+        padding-top: 2rem;
+        padding-left: 12rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-main-cont{
+        height: 100vh;
+    }
+    .footer-top-cont{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .footer-list-cont{
+        padding-top: 2rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    .footer-list-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-contact-cont{
+        align-items: center;
+    }
+    .footer-contact{
+        padding-left: 0rem;
+    }
+    .footer-bottom-cont{
+        height: 50px;
+    }
+  }

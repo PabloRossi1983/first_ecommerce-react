@@ -1,5 +1,6 @@
 .logo-cont{
-    padding: 0.5rem;
+    display: flex;
+    padding: 0.5rem 0.5rem 0.5rem 5rem;
 }
 
 .foto-consult{
@@ -9,3 +10,10 @@
 .logo-sz{
     width: 100px;
 }
+
+@media (max-width: 576px) {
+    .logo-cont{
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+    
+  }

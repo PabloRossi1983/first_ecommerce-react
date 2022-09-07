@@ -7,15 +7,13 @@ const CartIcon  = ({showCart})=> {
   const {totalAmount} = useContext(CartContext)
 
     return(
-      <div className='cart-icon-container d-flex align-items-center justify-content-around'>
+      <div className='cart-icon-container align-items-center justify-content-around'>
         <ul className="nav justify-content-center">
-          {/* <li className="nav-item">
-            <a className="cart-nav-link" href="#">Acceder</a>
-          </li> */}
           <li className="cart-nav-item">
-            <div className='quant-icon'>
-              {totalAmount > 0 && <p>{totalAmount}</p>}
-              <i onClick={()=>showCart(true)} className="fa-solid fa-cart-shopping"></i>
+            <div  onClick={()=>showCart(true)}  className='cart-icon'>
+              {totalAmount > 0 && <p className='cart-icon-quant'>{totalAmount}</p>}
+              <i className="fa-solid fa-cart-shopping"></i>
+              <p className='carrito-text'>CARRITO</p>
             </div>
           </li>
         </ul>

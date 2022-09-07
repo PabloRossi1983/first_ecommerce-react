@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import useNumberFormat from "./Hooks/useFormatNumber";
 import "./Styles/ItemCount.css";
 import { CartContext } from "../Context/CartContext";
 
@@ -37,7 +38,7 @@ const ItemCount = ({setProdAmnt, data}) => {
       </div>
 
       <button className="sbmt-btn" onClick={onAdd}>Añadir al carrito<br /><small>Disponibles: {disponibles}</small></button>
-      <p className="total-amount">Valor total: ${total}</p>
+      <p className="total-amount">Valor total: ${useNumberFormat(total)}</p>
     </div>
     )  
 }

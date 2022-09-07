@@ -9,9 +9,22 @@
     width: 100px;
 }
 
-.serch-item-title{
+.serch-item-title-cont{
     grid-template-columns: 2/3;
     display: flex;
     justify-content: flex-start;
+    text-decoration: none;
+}
+
+.serch-item-title{
+    color: rgb(93, 93, 93);
+    font-size:medium;
+}
+
+.serch-item-title:hover{
+   font-weight: bold;
+}
+.link-no-decoration{
+    text-decoration: none;
 }
 

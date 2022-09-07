@@ -1,0 +1,40 @@
+.burguer-button-cont{
+    display: none;
+    height: 17px;
+    width: 25px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.burguer-button-cont:hover{
+    cursor: pointer;
+    height: 18px;
+    width: 26px;
+}
+
+
+.burguer-layer{
+    width: 100%;
+    border: solid black;
+    border-radius: 5px;
+    height: 20%;
+}
+
+.burguer-dark-layer{
+    background-color: rgb(93, 93, 93);
+    color: rgb(93, 93, 93);
+    border-color: rgb(93, 93, 93);
+}
+
+
+.burguer-ligth-leyer{
+    border: none;
+}
+
+@media (max-width: 992px) {
+    .burguer-button-cont{
+        justify-self: end;
+        display: block;
+    }
+}
+

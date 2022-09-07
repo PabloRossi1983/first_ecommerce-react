@@ -26,27 +26,24 @@
     justify-self: end;
 }
 
-.clear-btn{
+.cart-clear-btn{
     grid-column: 1/2;
     width: 36px;
     height: 36px;
     left: 689px;
     top: 429px;
     border: 0;
-    background-color: rgba(240, 248, 255, 0.386);
     border-radius: 50%;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.386);
+    transition: 1s ease-in-out;
 }
 
-.clear-btn :hover{
-    grid-column: 1/2;
-    width: 36px;
-    height: 36px;
-    left: 689px;
-    top: 429px;
-    border: 0;
-    background-color: rgba(0, 105, 196, 0.386);
-    border-radius: 50%;
-}
+/* .cart-clear-btn :hover{
+    background-color: rgba(173, 173, 173, 0.386);
+  
+} */
+
 
 .underline-1rem{
     margin-bottom: 1rem;

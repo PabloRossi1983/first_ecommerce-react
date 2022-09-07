@@ -1,38 +1,20 @@
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    font-weight: 8px;
-    color: rgb(93, 93, 93);
-    text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-}
-.nav-link :hover{
-    color: #000000;
-    font-weight: bold;
-}
-
-.nav-cont *{
-    text-decoration: none;
-    color: rgb(116, 116, 116)
-  }
-
-  .nav-link {
-    display: block;
-    padding: 0.5rem 1rem;
     font-size: medium;
     color: rgb(93, 93, 93);
-    text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    text-decoration: none;  
 }
-.nav-link :hover{
-    color: #000000;
-    font-weight: bold;
+
+.nav-link:hover{
+    color: #444444;
+    font-weight:600;
 }
 
 .menu-link-smaller{
     font-size: smaller;
 }
-.nav-cont *{
-    text-decoration: none;
-    color: rgb(116, 116, 116)
-  }
+
+
+
+

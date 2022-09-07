@@ -1,10 +1,10 @@
 #Repositorio "E-COMMERCE_PABLO_ROSSI
 
-Es un e-commerce pensado para una vendedora independiente de productos de la marca JUST. Cuenta hasta el momento con un section, una página de detalle y un filtro por categorías dinámicos. El menú de categorías también es dinámico.
+Es un e-commerce pensado para una vendedora independiente de productos de la marca JUST. Cuenta un section, una página de detalle y un filtro por categorías dinámicos. El menú de categorías también es dinámico.
 En la sección de detalle cuenta con un contador para agregar productos que responde al stock disponible y un indicador del monto total de la suma del valor de la cantidad de productos seleccionados.
 Se pueden gestionar los productos seleccionados tanto desde el Cart Widget como desde la página de Check Out.
-Este proyecto es parte de los desafíos del curso de React de Coderhouse y se encuentra en proceso de desarrollo.
-
+Adicionalmente cuenta con un SerchBar funcional.
+El proyecto es responsive en todas sus pages.
 
 ###Requisitos 
 
